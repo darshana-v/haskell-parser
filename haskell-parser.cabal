@@ -24,6 +24,7 @@ library
   ghc-options: -Wall -Wincomplete-record-updates -Wincomplete-uni-patterns -Wno-unused-top-binds -Wno-unused-local-binds -Wno-unused-pattern-binds -Wno-unused-matches -Wno-missing-signatures -Wno-type-defaults -Wno-compat-unqualified-imports -Wno-name-shadowing -fdefer-typed-holes
   build-depends:
       base >=4.7 && <5
+    , parsec
   default-language: GHC2021
 
 executable haskell-parser-exe
@@ -39,6 +40,7 @@ executable haskell-parser-exe
   build-depends:
       base >=4.7 && <5
     , haskell-parser
+    , parsec
   default-language: GHC2021
 
 test-suite haskell-parser-test
@@ -59,4 +61,5 @@ test-suite haskell-parser-test
     , haskell-parser
     , hspec
     , hspec-discover
+    , parsec
   default-language: GHC2021
